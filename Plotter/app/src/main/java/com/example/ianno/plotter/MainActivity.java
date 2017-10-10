@@ -549,7 +549,10 @@ public class MainActivity extends FragmentActivity implements OnClickListener,On
         if (scanningResult != null) {
             scanContent = scanningResult.getContents();
             scanFormat = scanningResult.getFormatName();
-            sendData("2");
+            sendData("2");sendData("4");
+             Toast toast = Toast.makeText(getApplicationContext(),
+                    "Data Transmitted", Toast.LENGTH_SHORT);
+            toast.show();
 //we have a result
         }
         else{
@@ -596,12 +599,7 @@ public class MainActivity extends FragmentActivity implements OnClickListener,On
                         }
                         //Showing toast message of the response
                         Log.d(TAG,"Listener");
-                        //converts base64 to bitmap
-//                        byte[] decodedString = Base64.decode(s, Base64.DEFAULT);
-//                        Bitmap decodedByte = BitmapFactory.decodeByteArray(decodedString, 0, decodedString.length);
-//
-//                        imgTakenPhoto.setImageBitmap(decodedByte);
-                        // Toast.makeText(MainActivity.this, s , Toast.LENGTH_LONG).show();
+                       
                     }
                 },
                 new Response.ErrorListener() {
