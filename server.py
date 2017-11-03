@@ -141,7 +141,7 @@ def get_parcel_location():
         retval = ""
         for r in route:
             retval += str(r[0])+":"+str(r[1])+","
-        return retval[-1]
+        return retval[:-1]
 
 @post('/get_or_post_info/<pathcode>')
 def get_or_post_info(pathcode):
